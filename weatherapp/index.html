@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Paytone+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+           <!-- Title -->
+            <div class="title">
+                <h1>Weather App</h1>
+                <p>the weather app you need</p>
+            </div>
+        </header>
+        
+        <!-- Form field -->
+        <!-- <i id="search-icon" class="fas fa-search"></i> -->
+        <div class="search-bar">
+                <input type="text" class="inputValue" placeholder="Enter city name" autocomplete="off">
+                <button type="submit" class="button"><i id="search-icon" class="fas fa-search"></i></button>
+        </div>
+        
+        <!-- Display Temperature -->
+        <div class="display">
+            <div class="city_basic">
+                <p id='city'></p>
+                <p id='weather_desc'></p>
+            </div>
+            
+         <!-- Current weather data -->
+            <div class="weather_data">
+            <p id='weather_data'></p>
+            </div>
+
+        </div>
+        
+
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

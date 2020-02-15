@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 70%;
+    min-height: 550px;
+    padding: 10px;
+    margin: 25px auto;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+body .container a {
+    text-decoration: none;
+    color: #22222270;
+    font-family: "Raleway";
+    transition: 0.15s ease;
+}
+
+body .container a:hover {
+  color: #c23616;
+}
+
+@media (max-width:920px) {
+    width: 10px;
+    height: 6px;
+    background: #487eb0;
+    border-radius: 1px;
+    
+}
+
+@media (max-width: 600px) {
+  body .container {
+    top: 0px;
+    margin: 0;
+    border-radius: 0px;
+    width: 100%;
+    min-height: 615px;
+  }
+}
+
+@media (max-width: 500px) {
+  body .container {
+    top: 0px;
+    width: 100%;
+    min-height: 615px;
+    border-radius: 0px;
+    margin: 0;
+  }
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@media (max-width: 920px) {
+    header {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+header .title {
+    text-align: center;
+}
+
+header .title h1 {
+    color: #487eb0;
+    font-family: 'Paytone One';
+    font-size: 50px;
+}
+
+@media (max-width: 920px) {
+    header .title h1 {
+        font-size: 40px;
+    }
+}
+
+header .title p {
+    color: #22222270;
+    font-family: "Raleway";
+}
+
+.search-bar {
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+}
+
+
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-family: "Raleway";
+    outline: none;
+    transition: 0.4s ease;
+    font-size: 1rem;
+}
+
+.search-bar input:focus {
+    border: 1px solid #487eb0;
+}
+.search-bar input::placeholder {
+    font-family: "Raleway";
+    color: #22222270;
+    font-size: 1rem;
+}
+
+.search-bar #search-icon {
+    position: absolute;
+    right: 8px;
+    top: 25px;
+    font-size: 20px;
+    color: #22222270;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.search-bar input:focus ~ button > #search-icon {
+  color: #487eb0;
+}
+
+button {
+    border: 0;
+    background: none;
+}
+.display {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#city {
+    color: #487eb0;
+    font-family: 'Paytone One';
+    padding: 10px;
+    font-size: 1.5rem;
+    
+}
+
+.display p {
+    font-family: 'Raleway';
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
