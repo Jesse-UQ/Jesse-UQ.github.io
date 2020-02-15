@@ -1,0 +1,616 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2980b9;
+    color: #00ecf0;
+    font-family: "Montserrat Regular";
+}
+
+body p {
+    line-height: 1.5em;
+}
+
+body a {
+    text-decoration: none;
+    color: #00ecf0;
+    background-color: #2980b9;
+    transition: 0.2s ease; 
+}
+
+body a:hover {
+    color:#f0f0f0;
+}
+
+body .btn-link {
+    width: 110px;
+    height: 30px;
+    padding: 3px;
+    border: 1px solid #00ecf0;
+    border-radius: 1px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .btn-link * {
+      margin: 0px 5px;
+}
+
+body ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+body ul li {
+    list-style: none;
+    padding: 3px;
+    margin: 0 5px;
+}
+
+.highlighted {
+    color: #f0f0f0;
+    font-family: "Montserrat Regular" sans-serif;
+}
+
+@media (min-width:1920px) {
+    body p, body a {
+        font-size: 22px;
+    }
+    
+    body .btn-link {
+        width: 140px;
+        font-size: 20px;
+    }
+    
+    body input, body textarea, body #submitBtn {
+      font-size: 18px; }
+}
+
+nav {
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    padding: 10px;
+    margin-right: 25px;
+}
+
+@media (max-width: 550px) {
+    nav {
+      justify-content: center;
+      margin: 0; } }
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#main {
+    display: flex;
+    justify-content:space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+#main #main-left-side {
+    flex-basis: 50%;
+    color: #00ecf0;
+}
+
+#main #main-left-side #resume {
+    height: 35px;
+    font-family: "Montserrat Medium";
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+    background-color: #2980b9;
+    border-radius: 25px;
+    color: #00ecf0; 
+}
+
+#main #main-left-side #resume::before {
+    content:"resume";
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#main #main-left-side #resume::after {
+    content: "\e884";
+    font-family: "Material Icons";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-30px);
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#main #main-left-side #resume:hover {
+    background-color: #00ecf0;
+    transition: 0.3s ease;
+}
+
+#main #main-left-side #resume:hover::before {
+    transform: translateY(30px);
+}
+
+#main #main-left-side #resume:hover::after {
+      transform: translate(-50%, 0px);
+      color: #000026;
+}
+
+@media (max-width: 550px) {
+    #main #main-left-side {
+        flex-basis: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+#main h1 {
+    font-family: "Montserrat Black";
+    font-size: 55px;
+    text-shadow: 4px 4px #04fbff50;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 400px) {
+    #main h1 {
+        font-size: 40px;
+    }
+}
+
+#main p {
+    margin: 5px 0 20px 0;
+    
+}
+
+#main p .highlighted {
+    color: #f0f0f0;
+    font-family: "Montserrat SemiBold";
+}
+
+@media (max-width: 550px) {
+    #main p {
+         font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content:center;
+    margin: 15px 0px;
+    position: relative;
+    transition: 1s;
+    text-align: center;
+}
+
+#skills * {
+    margin: 20px 0;
+}
+
+#skills #icons {
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-content: center;
+    padding: 20px;
+}
+
+#skills #icons a {
+    position: relative;
+    padding: 0 20px;
+}
+
+#skills #icons .tooltip {
+    display: none;
+    min-width: 90px;
+    padding: 5px;
+    margin-left: 20px;
+    font-family: "Montserrat SemiBold";
+    font-size: 14px;
+    
+}
+
+#skills #icons a:hover .tooltip {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    left: -25px;
+    bottom: -35px;
+    animation: tooltip 0.35s ease-in-out forwards;
+    
+}
+
+
+#skills #icons * {
+    margin: 0 5px;
+}
+
+@media (max-width: 1024px) {
+    #skills #icons a {
+        position: relative;
+    }
+    
+    #skills #icons .tooltip {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        min-width: 90px;
+        font-size: 14px;
+        font-family: "Montserrat Medium";
+        position: absolute;
+        left: -25px;
+        bottom: -25px;
+        animation: none;
+    }
+    
+    #skills #icons .tooltip::before {
+        content: '';
+        height: 0;
+        widows: 0;
+        z-index: -1;
+    }
+    
+    #skills #icons a:hover .tooltip {
+        left: -25px;
+        bottom: -25px;
+        animation: none; 
+    }
+    
+    #skills #icons * {
+        margin: 15px 10px;
+    }
+}
+
+#skills h1 {
+    font-family: "Montserrat Black";
+    font-size: 50px;
+    color: #f0f0f0;
+}
+
+#skills p {
+    margin: 15px 0;
+}
+
+@media (max-width: 400px) {
+    #skills h1 {
+      font-size: 40px;
+    }
+    
+    #skills p {
+      padding: 10px; 
+    }
+}
+
+#projects {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#projects h1 {
+    font-family: "Montserrat Black";
+    font-size: 50px;
+    color: #f0f0f0;
+}
+
+#projects p {
+    margin: 15px 0;
+}
+
+#projects .projects-container {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    position: relative;
+   
+    
+}
+
+.testimonial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial .photo {
+    width: 300px;
+    margin-left: 30px;
+    
+}
+
+
+.testimonial .content {
+    width: 500px;
+    height: 100%;
+    position: relative;
+}
+
+.testimonial blockquote {
+    padding: 32px;
+    font-size: 20px;
+    margin: 80px auto;
+}
+
+
+
+.testimonial .photo img {
+    max-width: 100%;
+}
+
+.slider-next, .slider-prev {
+    position: absolute;
+    top: 222px;
+    font-size: 38px;
+    cursor: pointer;
+    
+}
+
+.slider-prev {
+    left: -24px;
+}
+
+.slider-next {
+    right: -24px;
+}
+
+@media screen and (max-width: 500px) {
+    
+    body {
+        overflow-x: hidden;
+    }
+    .testimonials {
+        max-width: 400px;
+        left: -180px;
+        
+    }
+    
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+        max-width: 400px;
+        margin-left: -30px;
+        margin-top: 90px;
+        
+     
+    }
+    
+    .testimonial .photo {
+        width: 50%;
+        margin-left: 10px;
+    }
+    
+    .slider-prev {
+        left:70px;
+        top: 100px;
+    }
+    
+    .slider-next {
+        right: 490px;
+        top: 100px;
+    }
+    
+    .dots-container {
+        margin-left: -200px;
+    }
+    
+    .testimonial .content blockquote{
+        font-size: 14px;
+        max-width: 400px;
+
+    }
+    
+    
+}
+
+.dots-container {
+    width: 120px;
+    padding: 8px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#contact {
+    margin: 80px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#contact h1 {
+    font-family: "Montserrat Black";
+    font-size: 50px;
+    color: #f0f0f0;
+    margin: 20px 0;
+}
+
+#contact p {
+    margin: 20px auto;
+    width: 70%;
+}
+
+#contact #contact-form {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 400px;
+    text-align: left;
+}
+
+@media (max-width: 400px) {
+  #contact #contact-form {
+    width: 90%; }
+}
+
+#contact #contact-form div {
+    width: 100%;
+    position: relative; 
+}
+
+#contact #contact-form div label {
+    position: absolute;
+    top: 15px;
+    left: 4px;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    pointer-events: none;
+    font-size: 12px;
+    color: #04fbff60;
+}
+
+#contact #contact-form div input {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #04fbff40;
+    background: none;
+    outline: none;
+    font-family: "Montserrat Regular";
+    color: #f0f0f0;
+    transition: 0.5s ease;
+}
+
+#contact #contact-form div textarea {
+    width: 100%;
+    margin: 35px 0 10px 0;
+    padding: 8px;
+    border: 1px solid #04fbff40;
+    background: none;
+    outline: none;
+    font-family: "Montserrat Regular";
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: 0.5s ease; 
+}
+
+#contact #contact-form button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #04fbff40;
+    background: none;
+    color: #04fbff60;
+    font-family: "Montserrat Medium";
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#contact #contact-form button:hover {
+    background: #3498db;
+    color:#f0f0f0;
+}
+
+#contact #contact-form input:focus ~ label {
+    top: -4px;
+    color: #00ecf0;
+}
+
+#contact #contact-form input:valid ~ label {
+    top: -4px;
+    color: #00ecf0;
+}
+
+#contact #contact-form textarea:focus ~ label {
+    color: #00ecf0;
+}
+
+#contact #contact-form textarea:valid ~ label {
+    color: #00ecf0;
+}
+
+#contact #mail--error {
+    margin: 10px 0;
+    color: #00ecf0;
+    font-family: "Montserrat Regular";
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+    #contact h1 {
+      font-size: 40px;
+    }
+    
+    #contact p {
+      padding: 10px;
+      font-size: 14px;
+    }
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    border-top: 1px solid #04fbff30;
+    justify-content: space-between;
+    align-content: center;
+}
+
+
+
+
+
+
+footer p {
+    flex: 1;
+    text-align: center;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
