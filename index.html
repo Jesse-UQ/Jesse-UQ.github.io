@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <meta name="author" content="Jesse Feng">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon family=Material+Icons" rel="stylesheet">
+    <script src="https://use.fontawesome.com/76ff0c3680.js"></script>
+    <link rel="stylesheet" href="src/fonts/fonts.css">
+    <link rel="stylesheet" href="src/css/glider.min.css">
+    
+</head>
+<body>
+    <!--NAVIGATION LINKS / MENU -->
+    <nav id="nav_links">
+       <ul>
+           <li><a href="#projects" id="projects_top">projects</a></li>
+           <li><a href="#contact" id="contact_top">contact</a></li>
+       </ul>
+    </nav>
+    
+    <!--CONTAINER -->
+    <div id="container">
+        <!--MAIN SECTION -->
+        <section id="main">
+           
+            <div id="mouse__scroll"></div>
+            <!-- LEFT SIDE -->
+            <div id="main-left-side" class="main-side">
+                <h1>Hi, I'm <span class='highlighted'>Jesse</span>!</h1>
+                <p>
+                    I'm a web developer, currently focusing on front-end, with a goal to become a full-stack developer. Check out some of my projects down below. Currently looking for an <span class="highlighted">internship</span> or an <span class="highlighted">entry</span> level position.
+                </p>
+                <!-- RESUME DOWNLOAD BUTTON -->
+                <a id="resume"href="https://drive.google.com/file/d/1BZMF8poZKC86ntEN-wVNlNSCWfy6fxpL/view?usp=sharing" target="_blank" title="CV" rel="noopener" class="btn-link"></a>
+            </div>
+            <!-- RIGHT SIDE -->
+            <div id="main-right-side" class="main-side">
+               <img src="src/images/avatar.svg" width="300px" height="300px" alt="">
+                
+            </div>
+        </section>
+        
+        <!--SKILLS SECTION -->
+        <section id="skills">
+            <h1>WHAT DO I USE ?</h1>
+            <p>I have experience with the following tools & technologies:</p>
+            <!-- TECH ICONS -->
+            <div id="icons">
+               <a><img src="src/images/logos/html5.svg" alt="HTML5" width="40px" height="40px"><span class="tooltip">HTML5</span></a>
+               <a><img src="src/images/logos/css3.svg" alt="CSS3" width="40px" height="40px"><span class="tooltip">CSS3</span></a>
+               <a><img src="src/images/logos/javascript_1.svg" alt="JAVASCRIPT" width="40px" height="40px"><span class="tooltip">JAVASCRIPT</span></a>
+               <a><img src="src/images/logos/sass.svg" alt="SASS" width="40px" height="40px"><span class="tooltip">SASS</span></a>
+               <a><img src="src/images/logos/illustrator.svg" alt="ILLUSTRATOR" width="40px" height="40px"><span class="tooltip">ILLUSTRATOR</span></a>
+               <a><img src="src/images/logos/photoshop.svg" alt="PHOTOSHOP" width="40px" height="40px"><span class="tooltip">PHOTOSHOP</span></a>
+            </div>
+            
+            <p>Currently learning <span class="highlight">React</span></p>
+        </section>
+        <!-- GLIDES -->
+        <section id="projects">
+           <h1>SOME OF MY PROJECTS</h1>
+           <p>Some of the projects I have created so far:</p>
+           <div class="projects-container">
+               <div class="testimonials">
+                  <div class="testimonial">
+                      <div class="photo">
+                          <img src="src/images/weather.png" alt="Photo">
+                      </div>
+                      <div class="content">
+                          <blockquote>
+                              Weather application using openweather API. Getting a current weather for a city.
+                              
+                          </blockquote>
+                      </div>
+                    </div>
+                    <div class="testimonial">
+                      <div class="photo">
+                          <img src="src/images/testimonial2.jpg" alt="Photo">
+                      </div>
+                          <div class="content">
+                              <blockquote>
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic minima a, cupiditate. Quia, nisi. Autem veniam eius nihil magni.
+                              </blockquote>
+                          </div>
+                    </div>
+                    <div class="testimonial">
+                      <div class="photo">
+                          <img src="src/images/testimonial3.jpg" alt="Photo">
+                      </div>
+                          <div class="content">
+                              <blockquote>
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic minima a, cupiditate. Quia, nisi. Autem veniam eius nihil magni.
+                              </blockquote>
+                          </div>
+                    </div>
+                  </div>
+                  <span class="slider-prev"><i class="fas fa fa-chevron-left"></i></span>
+                  <span class="slider-next"><i class="fas fa fa-chevron-right"></i></span>
+                  <div role='tablist' class="dots-container">
+                      <div class="dots"></div>
+                  </div>
+               
+            </div>
+           
+   
+        </section>
+        
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <h1>CONTACT</h1>
+            <p>If you like some of my projects and the work I've done so far, please feel free to contact me. I'm currently looking for an <span class="highlighted">internship</span> or an <span class="highlighted">entry</span> level position.</p>
+            <!-- CONTACT FORM -->
+            <form id="contact-form">
+                <input type="hidden" name="contact_numbers">
+                <div>
+                    <input type="text" id="name_input" name="user_name" required="" value="" autocomplete="off">
+                    <label for="name_input">Your name</label>
+                </div>
+                
+                <div>
+                    <input type="email" id="email_input" name="user_email" required="" autocomplete="off">
+                    <label for="email_input">Email address</label>
+                </div>
+                
+                <div>
+                    <textarea name="text" id="message_input" spellcheck="false" rows="8" required="" value=""></textarea>
+                    <label for="message_input">Message</label>
+                </div>
+                <button type="submit" id="submitBtn">Send message</button>
+            </form>
+            
+            <p id="mail--error"></p>
+        </section>
+        
+        <footer>
+            <p id="created--by class="footer--section>Jesse Feng &copy 2019</p>
+
+        </footer>
+    </div>
+    <script src='src/js/script.js'></script>
+    <script src="src/js/glider.min.js"></script>
+  <script>
+
+    new Glider(document.querySelector('.testimonials'), {
+      slidesToShow: 1,
+      dots: '.dots',
+      arrows: {
+        prev: '.slider-prev',
+        next: '.slider-next'
+      }
+    });
+
+  </script>
+
+
+</body>
+</html>
